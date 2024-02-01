@@ -13,7 +13,7 @@ class GoodsBlock extends React.Component {
 
     return (
         <table className='GoodsBlock'>
-            <caption>Товары магазина 21век</caption>
+            <caption>Товары магазина {this.props.storeName}</caption>
             <thead>
             <tr>
                 <th>№</th>

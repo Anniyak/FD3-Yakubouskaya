@@ -1,5 +1,4 @@
 .GoodsBlock, .GoodsBlock th{
     border: black solid 2px;
-    border-collapse: collapse;
-   
+    border-collapse: collapse;   
 }
