@@ -8,7 +8,7 @@ class GoodsBlock extends React.Component {
   render() {
 
     const goodsCode=this.props.goods.map( (v,i) =>
-      <GoodRow key={i} index={i+1} productName={v.productName} price={v.price} quantity={v.quantity} pictureUrl={v.pictureUrl} code={v.code} />
+      <GoodRow key={i} index={i+1} productName={v.productName} price={v.price} quantity={v.quantity} pictureUrl={v.pictureUrl}/>
     );
 
     return (
