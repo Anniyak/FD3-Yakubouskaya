@@ -1,0 +1,16 @@
+td{
+    border: grey solid 1px;
+    border-collapse: collapse;
+    text-align: center;
+   
+}
+.productName {
+    text-align: left;
+}
+td img{
+    max-height: 75px;
+    
+}
+.checkedRow{
+    background-color: tomato;
+}
