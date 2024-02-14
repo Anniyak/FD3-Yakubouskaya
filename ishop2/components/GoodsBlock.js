@@ -1,39 +1,37 @@
 import React from "react";
 
 import "./GoodsBlock.css";
-import GoodRow from "./GoodRow";
+import GoodItem from "./GoodItem";
 
 class GoodsBlock extends React.Component {
- 
   state = {
-    checkedRowKey: this.props.goods.length>0? this.props.goods[0].key:null,
-    goods:this.props.goods
+    checkedItemKey:
+      this.props.goods.length > 0 ? this.props.goods[0].key : null,
+    goods: this.props.goods,
   };
 
-  checkRow = (key) => {
-    this.setState({ checkedRowKey: key });
+  checkItem = (key) => {
+    this.setState({ checkedItemKey: key });
   };
-  deleteRow = (key) => {
-    const goods=JSON.parse(JSON.stringify(this.state.goods)).filter(item=>item.key!=key);
-
-    let newkey=this.state.checkedRowKey!=key?this.state.checkedRowKey:(goods.length>0? goods[0].key:null)
- 
-   
-    this.setState({ checkedRowKey:  newkey});
-       this.setState({ goods: goods});
+  deleteItem = (key) => {
+    const goods = this.state.goods.filter((item) => item.key != key);
+    //переопределение выделенного если удалили текущий
+    if (this.state.checkedItemKey == key)
+      this.setState({ checkedItemKey: goods.length > 0 ? goods[0].key : null });
+    this.setState({ goods: goods });
   };
   render() {
     const goodsCode = this.state.goods.map((v, i) => (
-      <GoodRow
+      <GoodItem
         key={v.key}
         index={v.key}
-        checked={this.state.checkedRowKey == v.key}
+        checked={this.state.checkedItemKey == v.key}
         productName={v.productName}
         price={v.price}
         quantity={v.quantity}
         pictureUrl={v.pictureUrl}
-        checkRow={this.checkRow}
-        deleteRow={this.deleteRow}
+        checkItem={this.checkItem}
+        deleteItem={this.deleteItem}
       />
     ));
 
