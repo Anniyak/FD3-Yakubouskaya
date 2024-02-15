@@ -37,10 +37,14 @@ class Filter extends React.Component {
     this.setState({ wordsString: newList.join("\n") });
   };
 
+  doNothing = () =>{
+
+  }
+
   render() {
     return (
       <div>
-        <div class="controls">
+        <div className="controls">
           <input
             type="checkbox"
             checked={this.state.sortedChecked}
@@ -54,7 +58,7 @@ class Filter extends React.Component {
           <input type="button" value="сброс" onClick={this.cleanSettings} />
         </div>
 
-        <textarea className="wordsArea" value={this.state.wordsString} />
+        <textarea className="wordsArea" value={this.state.wordsString} onChange={this.doNothing}/>
       </div>
     );
   }
