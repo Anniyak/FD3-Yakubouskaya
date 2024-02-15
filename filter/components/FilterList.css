@@ -1,0 +1,17 @@
+.controls,
+.wordsArea {
+    width: 270px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+}
+
+.wordsArea {
+    box-sizing: border-box;
+    height: 100px;
+}
