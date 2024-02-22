@@ -1,0 +1,10 @@
+.frameDiv{
+    border-width: 3px;
+    border-style: solid;
+    margin: 3px;
+    width: fit-content;
+}
+.startDiv{
+    width: fit-content;
+    margin: 10px 30px;
+}
