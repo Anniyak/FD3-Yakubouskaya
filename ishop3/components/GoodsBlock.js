@@ -28,8 +28,17 @@ class GoodsBlock extends React.Component {
   deleteItem = (key) => {
     const goods = this.state.goods.filter((item) => item.key != key);
     //переопределение выделенного если удалили текущий
-    if (this.state.checkedItemKey == key)
-      this.setState({ checkedItemKey: goods.length > 0 ? goods[0].key : null });
+    if (this.state.checkedItemKey == key){
+      const newKey= goods.length > 0 ? goods[0].key : null
+      this.setState({ checkedItemKey: newKey });
+      if (newKey)
+      this.setState({
+        checkedItem: this.state.goods.filter((item) => item.key == newKey)[0],
+      });
+      else  this.setState({
+        checkedItem: {},
+      });
+    }
     this.setState({ goods: goods });
   };
   editItem = (key) => {
@@ -41,6 +50,9 @@ class GoodsBlock extends React.Component {
   };
   cancelEdit = () => {
     this.setState({ modelState: modelState.view });
+    this.setState({
+      checkedItem: this.state.goods.filter((item) => item.key == this.state.checkedItemKey)[0],
+    });
   };
   saveEdit = (obj) => {
     this.setState({ modelState: modelState.view });
@@ -55,7 +67,9 @@ class GoodsBlock extends React.Component {
       //добавление
       this.state.goods.push(obj);
       this.setState({ checkedItemKey: obj.key });
-      this.setState({ goods: goods });
+      this.setState({ goods: this.state.goods });
+      let currItem =this.state.goods.filter((item) => item.key == obj.key)[0];
+      this.setState({ checkedItem: currItem });
     }
   };
   addItem = () => {
@@ -92,6 +106,7 @@ class GoodsBlock extends React.Component {
         checkItem={this.checkItem}
         deleteItem={this.deleteItem}
         editItem={this.editItem}
+        disableBtn={this.state.modelState!=modelState.view}
       />
     ));
     const addButton =

@@ -11,5 +11,9 @@
     padding-bottom: 10px;;
 }
 .productField > input{
-    width: 450px;
+    width: 200px;
+}
+.errorText{
+    font-size: 75%;
+    color: red;
 }

@@ -32,8 +32,14 @@ class GoodItem extends React.Component {
             type="button"
             value={"Редактировать"}
             onClick={this.editItem}
+            disabled={this.props.disableBtn}
           />
-          <input type="button" value={"Удалить"} onClick={this.deleteItem} />
+          <input
+            type="button"
+            value={"Удалить"}
+            onClick={this.deleteItem}
+            disabled={this.props.disableBtn}
+          />
         </td>
       </tr>
     );

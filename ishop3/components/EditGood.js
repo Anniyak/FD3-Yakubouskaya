@@ -14,23 +14,60 @@ class EditGood extends React.Component {
     goodPrice: this.props.currentItem.price || "",
     goodPictureUrl: this.props.currentItem.pictureUrl || "",
     goodQuantity: this.props.currentItem.quantity || "",
+    nameValid: true,
+    priceValid: true,
+    pictureUrlValid: true,
+    quantityValid: true,
   };
 
   changeName = (eo) => {
     const newName = eo.target.value;
     this.setState({ goodName: newName });
+    this.setState({
+      nameValid: this.checkText(newName),
+    });
   };
   changePrice = (eo) => {
     const newPrice = eo.target.value;
     this.setState({ goodPrice: newPrice });
+    this.setState({
+      priceValid: this.checkRationalNumber(newPrice),
+    });
   };
   changePictureUrl = (eo) => {
     const newPictureUrl = eo.target.value;
     this.setState({ goodPictureUrl: newPictureUrl });
+    this.setState({
+      pictureUrlValid: this.checkPictureUrl(newPictureUrl),
+    });
   };
   changeQuantity = (eo) => {
     const newQuantity = eo.target.value;
     this.setState({ goodQuantity: newQuantity });
+    this.setState({
+      quantityValid: this.checkPositiveInteger(newQuantity),
+    });
+  };
+  componentDidMount = () => {
+    this.setState({
+      nameValid: this.checkText(this.state.goodName),
+      priceValid: this.checkRationalNumber(this.state.goodPrice),
+      pictureUrlValid: this.checkPictureUrl(this.state.goodPictureUrl),
+      quantityValid: this.checkPositiveInteger(this.state.goodQuantity),
+    });
+  };
+  checkText = (text) => {
+    return text && text.length > 0;
+  };
+  checkRationalNumber = (num) => {
+    return num > 0;
+  };
+  checkPositiveInteger = (num) => {
+    return num > 0 && Number.isInteger(+num);
+  };
+  checkPictureUrl = (url) => {
+    var objRE = /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+    return objRE.test(url);
   };
   save = () => {
     this.props.saveEdit({
@@ -67,33 +104,72 @@ class EditGood extends React.Component {
             type="text"
             value={this.state.goodName}
             onChange={this.changeName}
+            required
           />
+
+          <span
+            className="errorText"
+            style={{ display: !this.state.nameValid ? "inline" : "none" }}
+          >
+            Заполните поле. Значение должно быть строкой
+          </span>
         </div>
         <div className="productField">
           <div className="label">Цена:</div>
           <input
-            type="text"
+            type="number"
             value={this.state.goodPrice}
             onChange={this.changePrice}
+            required
           />
+          <span
+            className="errorText"
+            style={{ display: !this.state.priceValid ? "inline" : "none" }}
+          >
+            Заполните поле. Значение должно рациональным положительным числом
+          </span>
         </div>
         <div className="productField">
           <div className="label">Ссылка на изображение:</div>
           <input
-            type="text"
+            type="url"
             value={this.state.goodPictureUrl}
             onChange={this.changePictureUrl}
+            required
           />
+          <span
+            className="errorText"
+            style={{ display: !this.state.pictureUrlValid ? "inline" : "none" }}
+          >
+            Заполните поле. Значение должно быть валидной ссылкой
+          </span>
         </div>
         <div className="productField">
           <div className="label">Количество:</div>
           <input
-            type="text"
+            type="number"
             value={this.state.goodQuantity}
             onChange={this.changeQuantity}
+            required
           />
+          <span
+            className="errorText"
+            style={{ display: !this.state.quantityValid ? "inline" : "none" }}
+          >
+            Заполните поле. Значение должно быть положительным целым числом
+          </span>
         </div>
-        <input type="button" value="Сохранить" onClick={this.save} />
+        <input
+          type="button"
+          value="Сохранить"
+          onClick={this.save}
+          disabled={
+            !this.state.nameValid ||
+            !this.state.priceValid ||
+            !this.state.pictureUrlValid ||
+            !this.state.quantityValid
+          }
+        />
         <input type="button" value="Отмена" onClick={this.cancel} />
       </div>
     );
