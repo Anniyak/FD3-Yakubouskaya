@@ -1,0 +1,11 @@
+.viewTitle{
+    font-size: 150%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.productData{
+    font-weight: bold;
+}
+.productImg{
+    max-height: 50px;
+}
