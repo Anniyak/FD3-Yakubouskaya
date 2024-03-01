@@ -1,23 +1,11 @@
 ﻿import React from "react";
-import PropTypes from "prop-types";
-
+import { clientEvents } from "./events";
 import MobileClient from "./MobileClient";
 
 import "./MobileCompany.css";
 
 class MobileCompany extends React.PureComponent {
-  // static propTypes = {
-  //   name: PropTypes.string.isRequired,
-  //   clients: PropTypes.arrayOf(
-  //     PropTypes.shape({
-  //       id: PropTypes.number.isRequired,
-  //       fam: PropTypes.string.isRequired,
-  //       im: PropTypes.string.isRequired,
-  //       otch: PropTypes.string.isRequired,
-  //       balance: PropTypes.number.isRequired,
-  //     })
-  //   ),
-  // };
+  
   filterType = {
     all: 0,
     active: 1,
@@ -28,6 +16,15 @@ class MobileCompany extends React.PureComponent {
     clients: this.props.clients,
     filter: this.filterType.all,
   };
+  componentDidMount = () => {
+    clientEvents.addListener("save", this.save);
+    clientEvents.addListener("delete", this.delete);
+  };
+
+  componentWillUnmount = () => {
+    clientEvents.removeListener("save", this.save);
+    clientEvents.removeListener("delete", this.delete);
+  };
   showAll = () => {
     this.setState({ filter: this.filterType.all });
   };
@@ -37,19 +34,38 @@ class MobileCompany extends React.PureComponent {
   showBlocked = () => {
     this.setState({ filter: this.filterType.blocked });
   };
-
-  setBalance = (clientId, newBalance) => {
-    let changed = false;
-    let newClients = [...this.state.clients]; // копия самого массива клиентов
-    newClients.forEach((c, i) => {
-      if (c.id == clientId && c.balance != newBalance) {
-        let newClient = { ...c }; // копия объекта изменившегося клиента
-        newClient.balance = newBalance;
-        newClients[i] = newClient;
-        changed = true;
-      }
+  save = (th) => {
+    let newClient = { ...th };
+    let newClients = [];
+    this.state.clients.forEach((cl) => {
+      if (cl.id == newClient.id) newClients.push(newClient);
+      else newClients.push(cl);
     });
-    if (changed) this.setState({ clients: newClients });
+
+    this.setState({ clients: newClients });
+  };
+  delete=(id)=>{
+    let newClients = [];
+    this.state.clients.forEach((cl) => {
+      if (cl.id != id)  newClients.push(cl);
+    });
+    this.setState({ clients: newClients });
+  }
+
+  addClient = () => {
+    let max = 0;
+    this.state.clients.forEach((cl) => {
+      if (cl.id > max) max = cl.id;
+    });
+    const newClient={
+      id: max+1,
+      fam: "",
+      im: "",
+      otch: "",
+      balance: 0,
+    }
+    let newClientsList=[...this.state.clients,newClient];
+    this.setState({ clients: newClientsList })
   };
 
   render() {
@@ -103,6 +119,11 @@ class MobileCompany extends React.PureComponent {
 
           <tbody>{clientsCode}</tbody>
         </table>
+        <input
+          type="button"
+          value="Добавить клиента"
+          onClick={this.addClient}
+        />
       </div>
     );
   }

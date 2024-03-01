@@ -1,5 +1,7 @@
 ﻿
 .MobileCompany, .MobileCompany th{
-  border: black solid 2px;
+  border-bottom: gray solid 2px; 
+  border-top: gray solid 2px; 
   border-collapse: collapse;   
+  margin-top: 20px;
 }
