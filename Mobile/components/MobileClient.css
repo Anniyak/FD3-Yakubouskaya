@@ -1,0 +1,13 @@
+﻿td{
+  border: grey solid 1px;
+  border-collapse: collapse;
+  text-align: center;
+ 
+}
+
+.active{
+  background-color: green;
+}
+.blocked{
+  background-color: red;
+}
