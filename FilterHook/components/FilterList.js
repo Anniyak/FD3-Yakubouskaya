@@ -2,16 +2,25 @@ import React, { useEffect, useState } from "react";
 
 import ResultList from "./ResultList";
 import ControlMenu from "./ControlMenu";
+import { StyleContext } from "../context/StyleContext";
 
 const Filter = (props) => {
   const [sortedChecked, setChecked] = useState(false);
   const [filterString, setFilterString] = useState("");
   const [wordsString, setWordsString] = useState(props.wordsList.join("\n"));
+  const incStyle = () => {
+    setStyle((style) => ({
+      ...style,
+      opacity: style.opacity > 0.2 ? style.opacity - 0.1 : 1,
+    }));
+  };
+  const [style, setStyle] = useState({ opacity: 1, changeOpacity: incStyle });
 
   const cleanSettings = () => {
     setChecked(false);
     setFilterString("");
     setWordsString(props.wordsList.join("\n"));
+    setStyle((style) => ({ ...style, opacity: 1 }));
   };
 
   const applySort = (checked) => {
@@ -37,8 +46,9 @@ const Filter = (props) => {
         applyFilter={applyFilter}
         cleanSettings={cleanSettings}
       />
-
-      <ResultList wordsString={wordsString} />
+      <StyleContext.Provider value={style}>
+        <ResultList wordsString={wordsString} />
+      </StyleContext.Provider>
     </div>
   );
 };

@@ -1,6 +1,10 @@
-
 .wordsArea {
     width: 270px;
     box-sizing: border-box;
     height: 100px;
+}
+
+.contextBtn {
+    display: block;
+    width: 270px;
 }
