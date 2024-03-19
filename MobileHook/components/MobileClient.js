@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+﻿import React, { useState, useMemo } from "react";
 import { clientEvents } from "./events";
 
 import "./MobileClient.css";
@@ -43,10 +43,12 @@ const MobileClient = (props) => {
     setChecked(clientMode.view);
   };
 
-  console.log("MobileClient id=" + props.client.id + " render");
-
-  return (
-    <tr>
+  
+  const memoizeedRenderResult=useMemo(
+    ()=>{
+      console.log("MobileClient id =" + props.client.id + " render");
+      return (
+        <tr>
       <td>
         {mode == clientMode.view ? (
           props.client.fam
@@ -96,6 +98,13 @@ const MobileClient = (props) => {
         <input type="button" value="Удалить" onClick={deleteClient} />
       </td>
     </tr>
+      )
+    },
+    [ props.client.fam, props.client.im, props.client.otch, props.client.balance, mode]   
+  );
+
+  return (
+    memoizeedRenderResult
   );
 };
 
