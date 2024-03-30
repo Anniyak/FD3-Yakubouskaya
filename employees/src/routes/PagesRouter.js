@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Projects } from '../pages/Projects.tsx';
 import { EmployeeDetails } from '../pages/EmployeeDetails.tsx';
 
+
 export const PagesRouter=()=>{
     return(
         <Routes>
