@@ -229,8 +229,8 @@
       "project": 2,
       "email": "mail014@tut.by",
       "telephone": "375(44)7512014",
-      "birthday": "05/29/1991",
-      "employmentDate": "07/26/2018"
+      "birthday": "1991-05-29",
+      "employmentDate": "2018-07-26"
     },
     {
       "id": "15",
@@ -1130,7 +1130,15 @@
     {
       "id": "20",
       "name": "СМЭВ"
-    }   
+    },
+    {
+      "id": "21",
+      "name": "новый проект"
+    },
+    {
+      "id": 25,
+      "name": "567656757"
+    }
   ],
   "departments": [
     {

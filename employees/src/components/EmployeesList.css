@@ -1,0 +1,30 @@
+.employeesPage{
+    display: flex;
+    flex-direction: row;
+
+}
+.EmployeesTable{
+    position: relative;
+}
+.filterControls{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.maleSelect{
+    width: 150px;
+}
+.checked{
+    font-weight: 700;
+}
+.selected{
+    background-color: bisque;
+}
+.emplRow{
+    transition: opacity 500ms ease;
+}
+
+.deleted{
+    opacity: .1;
+   
+}

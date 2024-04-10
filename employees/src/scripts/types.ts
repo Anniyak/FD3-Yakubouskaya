@@ -1,18 +1,22 @@
+export interface IEntity {
+  id: number;
+}
 export class Config {
   method?: any;
   headers?: any;
   body?: string;
 }
 
-export class Project {
+export class Project implements IEntity {
   id: number;
   name: string;
 }
-export class Employee {
-  birthday?: string;
+export class EmployeeType implements IEntity {
+  birthday?: Date;
   department?: number;
   email?: string;
   employmentDate?: string;
+  dismissalDate?:Date;
   gender?: string;
   id: number;
   isBoss?: boolean;
@@ -22,8 +26,12 @@ export class Employee {
   project?: number[];
   surname?: string;
   telephone?: string;
+  skype?:string;
+  deleted?:boolean;
+  note?:string;
 }
 
-class Projects {
-  Items: Project[];
+export class DepartmentType implements IEntity {
+  id: number;
+  name: string;
 }

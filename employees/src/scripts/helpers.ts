@@ -1,6 +1,16 @@
-// Вспомогательная функция для получения элементов по селектору
-export const getEl = (selector, all = false, el = document) =>
-  all ? [...el.querySelectorAll(selector)] : el.querySelector(selector)
+import { IEntity } from "./types.ts";
+
+// // Вспомогательная функция для получения элементов по селектору
+// export const getEl = (selector, all = false, el = document) =>
+//   all ? [...el.querySelectorAll(selector)] : el.querySelector(selector)
+
+export const newId = (entities: IEntity[]) => {
+  let max = 0;
+  entities.forEach((cl) => {
+    if (+cl.id > max) max = +cl.id;
+  });
+  return max + 1;
+};
 
 // Вспомогательная функция для генерации уникального `id`
 // export const newId = (n) =>

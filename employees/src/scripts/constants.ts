@@ -14,3 +14,10 @@ export const PUT = 'PUT'
 // Операции
 export const UPDATE = 'UPDATE'
 export const REMOVE = 'REMOVE'
+
+export const EMPLOYEES='employees'
+export const PROJECTS='projects'
+export const DEPARTMENTS='departments'
+
+export const MALE='male'
+export const FEMALE='female'

@@ -1,0 +1,56 @@
+.employeeBlock {
+    border: 1px solid black;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+/* .mainInfo,
+.overInfo,
+.photo,
+.firstMainInfo,
+.secondMainInfo,
+.noteInfo, */
+.projectsList {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.mainInfo,.overInfo {
+    display: flex;
+    column-gap: 20px;
+
+}
+
+.mainInfo>div, .overInfo>div {
+    width: 50%;
+}
+
+.firstMainInfo,
+.secondMainInfo,
+.firstOverInfo,
+.secondOverInfo,
+.thirdOverInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.firstOverInfo,
+.secondOverInfo,
+.thirdOverInfo {
+    justify-content: space-between;
+}
+.projectsList{
+    height: 112px;
+}
+.inputAndIcon{
+    width: calc(100% - 27px);
+    margin-left: 4px;
+}
+
+.noteArea{
+    width: 100%;
+    box-sizing: border-box;
+}

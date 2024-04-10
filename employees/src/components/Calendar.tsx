@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Calendar.css';
 import { Months } from '../scripts/calendarHelper.ts';
-import { Employee } from '../scripts/types.ts'
+import { EmployeeType } from '../scripts/types.ts'
 class Happiest {
     id: number;
     surname: string;
@@ -11,7 +11,7 @@ class Happiest {
 }
 
 export const Calendar = (props) => {
-    const employees: Employee[] = props.calendarData;
+    const employees: EmployeeType[] = props.calendarData;
 
     const happiestList: Happiest[] = [];
     const currentMonth = new Date().getMonth();
@@ -23,7 +23,7 @@ export const Calendar = (props) => {
     }
     employees.forEach(emp => {
         let birth = emp.birthday ? new Date(emp.birthday) : null;
-        if (birth && birth.getMonth() == month) {
+        if (birth && birth.getMonth() === month) {
             happiestList.push({
                 id: emp.id,
                 surname: emp.surname ?? "",
@@ -45,15 +45,7 @@ export const Calendar = (props) => {
         happiestList.forEach(h => {
             if (currBirth && h.birthDay === currBirth.birthDay) h.current = true;
         });
-        // if (happiestList.length && happiestList[0].birthDay > currDate)
-        //     happiestList[0].current = true;
-        // for (let i = 1; i < happiestList.length; i++) {
-        //     if (happiestList[i - 1].birthDay < currDate
-        //         && happiestList[i].birthDay >= currDate)
-        //         happiestList[i].current = true;
-        // }
     }
-    console.log(happiestList);
 
     return (<div>
         <div>Именинники {Months[month]}</div>
