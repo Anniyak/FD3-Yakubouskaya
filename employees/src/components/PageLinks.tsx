@@ -12,7 +12,7 @@ export const PageLinks = ()=>{
 
     }
     return (
-        <div>   
+        <div className='navigateBlock'>   
           <NavLink to="/emloyees" className={getLinkClass}>Работники</NavLink>
           <NavLink to="/projects" className={getLinkClass}>Проекты</NavLink>
         </div>

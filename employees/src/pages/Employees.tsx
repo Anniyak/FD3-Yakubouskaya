@@ -9,10 +9,7 @@ export const Employees = (props) => {
     return (
         <div>
             <EmpoyeesList employeeId={employeeId} data={props.data} getDataList={props.getDataList}  getDataById={props.getDataById} setData={props.setData} deleteData={props.deleteData}/>
-            Пользователь с айди {employeeId}
-
-            <a href="mailto:mail@htmlacademy.ru%2C%20anniyak@gmail.com?cc=anniyak@tut.by&body=привет&subject=вопрос">Напишите нам</a>
-       
+        
         </div>
     );
 }

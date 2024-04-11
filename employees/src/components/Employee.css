@@ -5,6 +5,7 @@
     flex-direction: column;
     row-gap: 20px;
     padding: 20px;
+    margin-top: 20px;
 }
 
 /* .mainInfo,
@@ -16,6 +17,7 @@
 .projectsList {
     border: 1px solid black;
     border-radius: 5px;
+    overflow: auto;
 }
 
 .mainInfo,.overInfo {
@@ -46,6 +48,9 @@
     height: 112px;
 }
 .inputAndIcon{
+    white-space:nowrap;
+}
+.inputAndIcon > input{
     width: calc(100% - 27px);
     margin-left: 4px;
 }
@@ -53,4 +58,7 @@
 .noteArea{
     width: 100%;
     box-sizing: border-box;
+}
+input:read-only{
+    opacity: .7;
 }

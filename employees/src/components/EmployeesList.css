@@ -1,6 +1,13 @@
 .employeesPage{
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
+
+}
+.controlPanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
 }
 .EmployeesTable{

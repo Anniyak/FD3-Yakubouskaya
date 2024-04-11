@@ -12,7 +12,7 @@ export const PagesRouter=(props)=>{
         <Routes>
             <Route path="/" element={<Employees data={props.data[EMPLOYEES]} getDataList={props.getDataList} getDataById={props.getDataById} setData={props.setData} deleteData={props.deleteData}/>}/>
             <Route path="/emloyees" element={<Employees data={props.data[EMPLOYEES]} getDataList={props.getDataList} getDataById={props.getDataById} setData={props.setData} deleteData={props.deleteData}/>}/>
-            
+            <Route path="/emloyees/:id" element={<Employees data={props.data[EMPLOYEES]} getDataList={props.getDataList} getDataById={props.getDataById} setData={props.setData} deleteData={props.deleteData}/>}/>
             <Route path="/emloyee/:id" element={<EmployeePage data={props.data[EMPLOYEES]} getDataList={props.getDataList} getDataById={props.getDataById} setData={props.setData} deleteData={props.deleteData}/>}/>
             <Route path="/projects" element={<Projects data={props.data[PROJECTS]} getDataList={props.getDataList} getDataById={props.getDataById} setData={props.setData} deleteData={props.deleteData}/>}/>
         </Routes>

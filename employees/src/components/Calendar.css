@@ -1,3 +1,25 @@
+ .birthdayBlock{
+    width: 300px;
+    border: 1px solid #3c2102;
+    border-radius: 5px;
+    padding: 2px;
+} 
+.calendarTitle{
+    font-weight: bold;
+    text-align: center;
+}
+.scrolledBlock{
+    border: 1px solid #3c2102;
+    border-radius: 5px;
+    height: 100px;
+    overflow: auto;
+}
 .current{
     font-weight: bold;
+}
+.calendarButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2px;
 }

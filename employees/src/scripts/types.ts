@@ -7,7 +7,7 @@ export class Config {
   body?: string;
 }
 
-export class Project implements IEntity {
+export class ProjectType implements IEntity {
   id: number;
   name: string;
 }

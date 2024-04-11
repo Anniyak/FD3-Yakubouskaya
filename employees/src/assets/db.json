@@ -16,8 +16,8 @@
       ],
       "email": "mail01@tut.by",
       "telephone": "375(44)7512001",
-      "birthday": "03/14/1962",
-      "employmentDate": "11/17/2012"
+      "birthday": "1962-03-14",
+      "employmentDate": "2012-11-17"
     },
     {
       "id": "2",
@@ -34,8 +34,8 @@
       ],
       "email": "mail02@tut.by",
       "telephone": "375(44)7512002",
-      "birthday": "11/28/1992",
-      "employmentDate": "06/14/2018"
+      "birthday": "1992-11-28",
+      "employmentDate": "2018-06-14"
     },
     {
       "id": "3",
@@ -52,8 +52,8 @@
       ],
       "email": "mail03@tut.by",
       "telephone": "375(44)7512003",
-      "birthday": "04/21/1986",
-      "employmentDate": "06/18/2022"
+      "birthday": "1986-01-21",
+      "employmentDate": "2022-06-18"
     },
     {
       "id": "4",
@@ -64,11 +64,11 @@
       "position": "программист системный",
       "isBoss": 1,
       "department": 2,
-      "project": 10,
+      "project":[ 10],
       "email": "mail04@tut.by",
       "telephone": "375(44)7512004",
-      "birthday": "12/16/1989",
-      "employmentDate": "05/09/2021"
+      "birthday": "1989-12-16",
+      "employmentDate": "2021-05-09"
     },
     {
       "id": "5",
@@ -85,8 +85,8 @@
       ],
       "email": "mail05@tut.by",
       "telephone": "375(44)7512005",
-      "birthday": "03/28/1966",
-      "employmentDate": "11/08/2014"
+      "birthday": "1966-03-28",
+      "employmentDate": "2014-08-11"
     },
     {
       "id": "6",
@@ -97,11 +97,11 @@
       "position": "системный аналитик",
       "isBoss": 0,
       "department": 1,
-      "project": 5,
+      "project": [5],
       "email": "mail06@tut.by",
       "telephone": "375(44)7512006",
-      "birthday": "08/25/1999",
-      "employmentDate": "07/28/2018"
+      "birthday": "1999-08-25",
+      "employmentDate": "2018-07-28"
     },
     {
       "id": "7",
@@ -118,8 +118,8 @@
       ],
       "email": "mail07@tut.by",
       "telephone": "375(44)7512007",
-      "birthday": "02/08/1987",
-      "employmentDate": "12/08/2015"
+      "birthday": "1987-02-08",
+      "employmentDate": "2015-12-08"
     },
     {
       "id": "8",
@@ -136,8 +136,8 @@
       ],
       "email": "mail08@tut.by",
       "telephone": "375(44)7512008",
-      "birthday": "07/07/1967",
-      "employmentDate": "02/07/2019"
+      "birthday": "1967-07-07",
+      "employmentDate": "2019-02-07"
     },
     {
       "id": "9",
@@ -148,11 +148,11 @@
       "position": "инженер-программист",
       "isBoss": 1,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail09@tut.by",
       "telephone": "375(44)7512009",
-      "birthday": "04/30/1983",
-      "employmentDate": "08/02/2017"
+      "birthday": "1983-04-30",
+      "employmentDate": "2017-08-02"
     },
     {
       "id": "10",
@@ -169,8 +169,8 @@
       ],
       "email": "mail010@tut.by",
       "telephone": "375(44)7512010",
-      "birthday": "03/02/1966",
-      "employmentDate": "11/15/2020"
+      "birthday": "1966-03-02",
+      "employmentDate": "2020-11-15"
     },
     {
       "id": "11",
@@ -181,11 +181,11 @@
       "position": "программист",
       "isBoss": 0,
       "department": 2,
-      "project": 2,
+      "project": [2],
       "email": "mail011@tut.by",
       "telephone": "375(44)7512011",
-      "birthday": "01/04/1987",
-      "employmentDate": "08/25/2018"
+      "birthday": "1987-01-04",
+      "employmentDate": "2018-08-25"
     },
     {
       "id": "12",
@@ -196,11 +196,11 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": 4,
+      "project": [4],
       "email": "mail012@tut.by",
       "telephone": "375(44)7512012",
-      "birthday": "10/05/1980",
-      "employmentDate": "02/02/2013"
+      "birthday": "1980-10-05",
+      "employmentDate": "2013-02-02"
     },
     {
       "id": "13",
@@ -211,11 +211,11 @@
       "position": "бизнес-аналитик",
       "isBoss": 0,
       "department": 1,
-      "project": 5,
+      "project": [5],
       "email": "mail013@tut.by",
       "telephone": "375(44)7512013",
-      "birthday": "04/13/1979",
-      "employmentDate": "09/30/2012"
+      "birthday": "1979-04-13",
+      "employmentDate": "2012-09-30"
     },
     {
       "id": "14",
@@ -226,7 +226,7 @@
       "position": "инженер-программист",
       "isBoss": 1,
       "department": 2,
-      "project": 2,
+      "project":[ 2],
       "email": "mail014@tut.by",
       "telephone": "375(44)7512014",
       "birthday": "1991-05-29",
@@ -248,8 +248,8 @@
       ],
       "email": "mail015@tut.by",
       "telephone": "375(44)7512015",
-      "birthday": "03/03/2000",
-      "employmentDate": "09/14/2018"
+      "birthday": "2000-03-03",
+      "employmentDate": "2018-09-14"
     },
     {
       "id": "16",
@@ -266,8 +266,8 @@
       ],
       "email": "mail016@tut.by",
       "telephone": "375(44)7512016",
-      "birthday": "04/04/1979",
-      "employmentDate": "04/09/2016"
+      "birthday": "1979-04-04",
+      "employmentDate": "2016-04-09"
     },
     {
       "id": "17",
@@ -280,8 +280,8 @@
       "department": 1,
       "email": "mail017@tut.by",
       "telephone": "375(44)7512017",
-      "birthday": "11/07/1967",
-      "employmentDate": "07/10/2016"
+      "birthday": "1967-11-07",
+      "employmentDate": "2016-07-10"
     },
     {
       "id": "18",
@@ -299,8 +299,8 @@
       ],
       "email": "mail018@tut.by",
       "telephone": "375(44)7512018",
-      "birthday": "05/03/1976",
-      "employmentDate": "03/22/2013"
+      "birthday": "1976-05-03",
+      "employmentDate": "2013-03-22"
     },
     {
       "id": "19",
@@ -311,11 +311,11 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail019@tut.by",
       "telephone": "375(44)7512019",
-      "birthday": "11/15/1963",
-      "employmentDate": "03/12/2013"
+      "birthday": "1963-11-15",
+      "employmentDate": "2013-03-12"
     },
     {
       "id": "20",
@@ -332,8 +332,8 @@
       ],
       "email": "mail020@tut.by",
       "telephone": "375(44)7512020",
-      "birthday": "05/07/1971",
-      "employmentDate": "03/06/2018"
+      "birthday": "1971-05-07",
+      "employmentDate": "2018-03-06"
     },
     {
       "id": "21",
@@ -350,8 +350,8 @@
       ],
       "email": "mail021@tut.by",
       "telephone": "375(44)7512021",
-      "birthday": "02/08/2000",
-      "employmentDate": "11/06/2019"
+      "birthday": "2000-02-08",
+      "employmentDate": "2019-11-06"
     },
     {
       "id": "22",
@@ -368,8 +368,8 @@
       ],
       "email": "mail022@tut.by",
       "telephone": "375(44)7512022",
-      "birthday": "01/28/1993",
-      "employmentDate": "09/06/2021"
+      "birthday": "1993-01-28",
+      "employmentDate": "2021-09-06"
     },
     {
       "id": "23",
@@ -380,11 +380,11 @@
       "position": "бизнес-аналитик",
       "isBoss": 0,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail023@tut.by",
       "telephone": "375(44)7512023",
-      "birthday": "08/04/1963",
-      "employmentDate": "05/15/2018"
+      "birthday": "1963-08-04",
+      "employmentDate": "2018-05-15"
     },
     {
       "id": "24",
@@ -395,11 +395,11 @@
       "position": "руководитель группы разработки бизнес-систем",
       "isBoss": 0,
       "department": 4,
-      "project": 7,
+      "project": [7],
       "email": "mail024@tut.by",
       "telephone": "375(44)7512024",
-      "birthday": "02/16/2006",
-      "employmentDate": "11/29/2012"
+      "birthday": "2006-02-16",
+      "employmentDate": "2012-11-29"
     },
     {
       "id": "25",
@@ -416,8 +416,8 @@
       ],
       "email": "mail025@tut.by",
       "telephone": "375(44)7512025",
-      "birthday": "11/13/1976",
-      "employmentDate": "01/13/2022"
+      "birthday": "1976-11-13",
+      "employmentDate": "2022-01-13"
     },
     {
       "id": "26",
@@ -435,8 +435,8 @@
       ],
       "email": "mail026@tut.by",
       "telephone": "375(44)7512026",
-      "birthday": "01/31/1986",
-      "employmentDate": "06/20/2022"
+      "birthday": "1986-01-31",
+      "employmentDate": "2022-06-20"
     },
     {
       "id": "27",
@@ -447,11 +447,11 @@
       "position": "тестировщик ПО",
       "isBoss": 1,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail027@tut.by",
       "telephone": "375(44)7512027",
-      "birthday": "10/15/1985",
-      "employmentDate": "06/14/2018"
+      "birthday": "1985-10-15",
+      "employmentDate": "2018-06-14"
     },
     {
       "id": "28",
@@ -462,11 +462,11 @@
       "position": "программист",
       "isBoss": 0,
       "department": 2,
-      "project": 11,
+      "project": [11],
       "email": "mail028@tut.by",
       "telephone": "375(44)7512028",
-      "birthday": "11/23/1975",
-      "employmentDate": "09/14/2015"
+      "birthday": "1975-11-23",
+      "employmentDate": "2015-09-14"
     },
     {
       "id": "29",
@@ -484,8 +484,8 @@
       ],
       "email": "mail029@tut.by",
       "telephone": "375(44)7512029",
-      "birthday": "12/17/1988",
-      "employmentDate": "08/22/2020"
+      "birthday": "1988-12-17",
+      "employmentDate": "2020-08-22"
     },
     {
       "id": "30",
@@ -496,11 +496,11 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail030@tut.by",
       "telephone": "375(44)7512030",
-      "birthday": "01/27/1969",
-      "employmentDate": "01/07/2021"
+      "birthday": "1969-01-27",
+      "employmentDate": "2021-01-07"
     },
     {
       "id": "31",
@@ -517,8 +517,8 @@
       ],
       "email": "mail031@tut.by",
       "telephone": "375(44)7512031",
-      "birthday": "04/12/1988",
-      "employmentDate": "07/01/2019"
+      "birthday": "1988-04-12",
+      "employmentDate": "2019-07-01"
     },
     {
       "id": "32",
@@ -529,11 +529,11 @@
       "position": "бизнес-аналитик",
       "isBoss": 1,
       "department": 1,
-      "project": 5,
+      "project": [5],
       "email": "mail032@tut.by",
       "telephone": "375(44)7512032",
-      "birthday": "01/16/1981",
-      "employmentDate": "04/06/2016"
+      "birthday": "1981-01-16",
+      "employmentDate": "2016-04-06"
     },
     {
       "id": "33",
@@ -551,8 +551,8 @@
       ],
       "email": "mail033@tut.by",
       "telephone": "375(44)7512033",
-      "birthday": "04/14/1971",
-      "employmentDate": "08/28/2012"
+      "birthday": "1971-04-14",
+      "employmentDate": "2012-08-28"
     },
     {
       "id": "34",
@@ -569,8 +569,8 @@
       ],
       "email": "mail034@tut.by",
       "telephone": "375(44)7512034",
-      "birthday": "07/20/1975",
-      "employmentDate": "12/04/2023"
+      "birthday": "1975-07-20",
+      "employmentDate": "2023-12-04"
     },
     {
       "id": "35",
@@ -587,8 +587,8 @@
       ],
       "email": "mail035@tut.by",
       "telephone": "375(44)7512035",
-      "birthday": "06/27/1987",
-      "employmentDate": "05/08/2017"
+      "birthday": "1987-06-27",
+      "employmentDate": "2017-05-08"
     },
     {
       "id": "36",
@@ -601,8 +601,8 @@
       "department": 1,
       "email": "mail036@tut.by",
       "telephone": "375(44)7512036",
-      "birthday": "03/01/2005",
-      "employmentDate": "03/02/2016"
+      "birthday": "2005-03-01",
+      "employmentDate": "2016-03-02"
     },
     {
       "id": "37",
@@ -619,8 +619,8 @@
       ],
       "email": "mail037@tut.by",
       "telephone": "375(44)7512037",
-      "birthday": "06/17/1967",
-      "employmentDate": "08/03/2013"
+      "birthday": "1967-06-17",
+      "employmentDate": "2013-08-03"
     },
     {
       "id": "38",
@@ -631,11 +631,11 @@
       "position": "администратор системный",
       "isBoss": 0,
       "department": 1,
-      "project": 8,
+      "project": [8],
       "email": "mail038@tut.by",
       "telephone": "375(44)7512038",
-      "birthday": "04/17/1983",
-      "employmentDate": "10/25/2014"
+      "birthday": "1983-04-17",
+      "employmentDate": "2014-10-25"
     },
     {
       "id": "39",
@@ -646,11 +646,11 @@
       "position": "программист",
       "isBoss": 0,
       "department": 2,
-      "project": 2,
+      "project": [2],
       "email": "mail039@tut.by",
       "telephone": "375(44)7512039",
-      "birthday": "06/28/2006",
-      "employmentDate": "07/23/2014"
+      "birthday": "2006-06-28",
+      "employmentDate": "2014-07-23"
     },
     {
       "id": "40",
@@ -661,11 +661,11 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail040@tut.by",
       "telephone": "375(44)7512040",
-      "birthday": "04/20/1973",
-      "employmentDate": "04/05/2018"
+      "birthday": "1973-04-20",
+      "employmentDate": "2018-04-05"
     },
     {
       "id": "41",
@@ -682,8 +682,8 @@
       ],
       "email": "mail041@tut.by",
       "telephone": "375(44)7512041",
-      "birthday": "04/04/1992",
-      "employmentDate": "02/22/2016"
+      "birthday": "1992-04-04",
+      "employmentDate": "2016-02-22"
     },
     {
       "id": "42",
@@ -700,8 +700,8 @@
       ],
       "email": "mail042@tut.by",
       "telephone": "375(44)7512042",
-      "birthday": "12/13/2004",
-      "employmentDate": "07/18/2015"
+      "birthday": "2004-12-13",
+      "employmentDate": "2015-07-18"
     },
     {
       "id": "43",
@@ -712,11 +712,11 @@
       "position": "программист системный ",
       "isBoss": 0,
       "department": 2,
-      "project": 10,
+      "project": [10],
       "email": "mail043@tut.by",
       "telephone": "375(44)7512043",
-      "birthday": "06/21/1985",
-      "employmentDate": "12/13/2015"
+      "birthday": "1985-06-21",
+      "employmentDate": "2015-12-13"
     },
     {
       "id": "44",
@@ -727,11 +727,11 @@
       "position": "спец.по тестированию ПО",
       "isBoss": 0,
       "department": 2,
-      "project": 2,
+      "project": [2],
       "email": "mail044@tut.by",
       "telephone": "375(44)7512044",
-      "birthday": "05/15/1988",
-      "employmentDate": "06/21/2015"
+      "birthday": "1988-05-15",
+      "employmentDate": "2015-06-21"
     },
     {
       "id": "45",
@@ -749,8 +749,8 @@
       ],
       "email": "mail045@tut.by",
       "telephone": "375(44)7512045",
-      "birthday": "06/17/1983",
-      "employmentDate": "12/06/2019"
+      "birthday": "1983-06-17",
+      "employmentDate": "2019-12-06"
     },
     {
       "id": "46",
@@ -761,11 +761,11 @@
       "position": "программист",
       "isBoss": 0,
       "department": 3,
-      "project": 5,
+      "project": [5],
       "email": "mail046@tut.by",
       "telephone": "375(44)7512046",
-      "birthday": "08/08/1975",
-      "employmentDate": "10/28/2016"
+      "birthday": "1975-08-08",
+      "employmentDate": "2016-10-28"
     },
     {
       "id": "47",
@@ -783,8 +783,8 @@
       ],
       "email": "mail047@tut.by",
       "telephone": "375(44)7512047",
-      "birthday": "11/06/1996",
-      "employmentDate": "08/16/2016"
+      "birthday": "1996-11-06",
+      "employmentDate": "2016-08-16"
     },
     {
       "id": "48",
@@ -801,8 +801,8 @@
       ],
       "email": "mail048@tut.by",
       "telephone": "375(44)7512048",
-      "birthday": "12/16/1999",
-      "employmentDate": "01/21/2017"
+      "birthday": "1999-12-16",
+      "employmentDate": "2017-01-21"
     },
     {
       "id": "49",
@@ -813,11 +813,11 @@
       "position": "программист",
       "isBoss": 0,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail049@tut.by",
       "telephone": "375(44)7512049",
-      "birthday": "05/15/1991",
-      "employmentDate": "04/01/2013"
+      "birthday": "1991-05-15",
+      "employmentDate": "2013-04-01"
     },
     {
       "id": "50",
@@ -834,8 +834,8 @@
       ],
       "email": "mail050@tut.by",
       "telephone": "375(44)7512050",
-      "birthday": "03/15/2001",
-      "employmentDate": "03/07/2019"
+      "birthday": "2001-03-15",
+      "employmentDate": "2019-03-07"
     },
     {
       "id": "51",
@@ -846,11 +846,11 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": 7,
+      "project": [7],
       "email": "mail051@tut.by",
       "telephone": "375(44)7512051",
-      "birthday": "01/19/1993",
-      "employmentDate": "09/24/2016"
+      "birthday": "1993-01-19",
+      "employmentDate": "2016-09-24"
     },
     {
       "id": "52",
@@ -863,8 +863,8 @@
       "department": 1,
       "email": "mail052@tut.by",
       "telephone": "375(44)7512052",
-      "birthday": "10/18/1983",
-      "employmentDate": "01/12/2019"
+      "birthday": "1983-10-18",
+      "employmentDate": "2019-01-12"
     },
     {
       "id": "53",
@@ -877,8 +877,8 @@
       "department": 1,
       "email": "mail053@tut.by",
       "telephone": "375(44)7512053",
-      "birthday": "10/17/1966",
-      "employmentDate": "07/29/2021"
+      "birthday": "1966-10-17",
+      "employmentDate": "2021-07-29"
     },
     {
       "id": "54",
@@ -895,8 +895,8 @@
       ],
       "email": "mail054@tut.by",
       "telephone": "375(44)7512054",
-      "birthday": "07/03/1998",
-      "employmentDate": "01/29/2015"
+      "birthday": "1998-07-03",
+      "employmentDate": "2015-01-29"
     },
     {
       "id": "55",
@@ -913,8 +913,8 @@
       ],
       "email": "mail055@tut.by",
       "telephone": "375(44)7512055",
-      "birthday": "05/28/1974",
-      "employmentDate": "05/14/2015"
+      "birthday": "1974-05-28",
+      "employmentDate": "2015-05-14"
     },
     {
       "id": "56",
@@ -931,8 +931,8 @@
       ],
       "email": "mail056@tut.by",
       "telephone": "375(44)7512056",
-      "birthday": "01/13/2002",
-      "employmentDate": "05/24/2016"
+      "birthday": "2002-01-13",
+      "employmentDate": "2016-05-25"
     },
     {
       "id": "57",
@@ -943,11 +943,11 @@
       "position": "администратор системный",
       "isBoss": 0,
       "department": 2,
-      "project": 8,
+      "project": [8],
       "email": "mail057@tut.by",
       "telephone": "375(44)7512057",
-      "birthday": "02/27/1987",
-      "employmentDate": "10/08/2023",
+      "birthday": "1987-05-27",
+      "employmentDate": "2023-10-08",
       "note": "0,25 ставки"
     },
     {
@@ -965,8 +965,8 @@
       ],
       "email": "mail058@tut.by",
       "telephone": "375(44)7512058",
-      "birthday": "11/07/1991",
-      "employmentDate": "08/01/2015"
+      "birthday": "1991-11-07",
+      "employmentDate": "2015-08-01"
     },
     {
       "id": "59",
@@ -983,8 +983,8 @@
       ],
       "email": "mail059@tut.by",
       "telephone": "375(44)7512059",
-      "birthday": "05/15/1962",
-      "employmentDate": "02/03/2015"
+      "birthday": "1962-05-15",
+      "employmentDate": "2015-02-03"
     },
     {
       "id": "60",
@@ -995,11 +995,11 @@
       "position": "тестировщик ПО",
       "isBoss": 0,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail060@tut.by",
       "telephone": "375(44)7512060",
-      "birthday": "10/13/1988",
-      "employmentDate": "03/08/2016"
+      "birthday": "1988-10-13",
+      "employmentDate": "2016-03-08"
     },
     {
       "id": "61",
@@ -1010,11 +1010,11 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail061@tut.by",
       "telephone": "375(44)7512061",
-      "birthday": "12/13/2000",
-      "employmentDate": "10/02/2014"
+      "birthday": "2000-12-13",
+      "employmentDate": "2014-10-02"
     },
     {
       "id": "62",
@@ -1025,11 +1025,11 @@
       "position": "программист ",
       "isBoss": 0,
       "department": 2,
-      "project": 5,
+      "project": [5],
       "email": "mail062@tut.by",
       "telephone": "375(44)7512062",
-      "birthday": "09/10/1987",
-      "employmentDate": "08/26/2017"
+      "birthday": "1987-09-10",
+      "employmentDate": "2017-08-26"
     },
     {
       "id": "63",
@@ -1046,8 +1046,8 @@
       ],
       "email": "mail063@tut.by",
       "telephone": "375(44)7512063",
-      "birthday": "06/13/1974",
-      "employmentDate": "03/02/2013"
+      "birthday": "1974-06-13",
+      "employmentDate": "2013-03-02"
     }
   ],
   "projects": [

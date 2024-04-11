@@ -1,12 +1,12 @@
 import React from 'react';
 import { Months } from '../scripts/calendarHelper.ts';
 import './Welcome.css'
-import{Employee, Department} from '../scripts/types.ts'
+//import{Employee, Department} from '../scripts/types.ts'
 
 
 export const Welcome = (props) => {
     const getItemsTemplate=()=>{return props.checkedItems.map(empl=> {return(
-        <div className='welcomItem'>
+        <div className='welcomItem' key={empl.id}>
                     
                     <div className='itemPhoto'>
                         <img src='/emplPhoto.jpg' alt='Синьков'></img>
