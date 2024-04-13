@@ -1,37 +1,57 @@
-.employeesPage{
+.employeesPage {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
 
 }
-.controlPanel{
+
+.controlPanel {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
-.EmployeesTable{
+
+.EmployeesTable {
     position: relative;
 }
-.filterControls{
+
+.filterControls {
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
-.maleSelect{
+
+.maleSelect {
     width: 150px;
 }
-.checked{
+
+.checked {
     font-weight: 700;
 }
-.selected{
+
+.selected {
     background-color: bisque;
 }
-.emplRow{
+
+.emplRow {
     transition: opacity 500ms ease;
 }
 
-.deleted{
+.deleted {
     opacity: .1;
-   
+
+}
+
+.itemButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    cursor: default;
 }

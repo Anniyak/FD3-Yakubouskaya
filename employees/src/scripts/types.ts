@@ -16,7 +16,7 @@ export class EmployeeType implements IEntity {
   department?: number;
   email?: string;
   employmentDate?: string;
-  dismissalDate?:Date;
+  dismissalDate?: Date;
   gender?: string;
   id: number;
   isBoss?: boolean;
@@ -26,9 +26,9 @@ export class EmployeeType implements IEntity {
   project?: number[];
   surname?: string;
   telephone?: string;
-  skype?:string;
-  deleted?:boolean;
-  note?:string;
+  skype?: string;
+  deleted?: boolean;
+  note?: string;
 }
 
 export class DepartmentType implements IEntity {

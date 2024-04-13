@@ -64,7 +64,9 @@
       "position": "программист системный",
       "isBoss": 1,
       "department": 2,
-      "project":[ 10],
+      "project": [
+        10
+      ],
       "email": "mail04@tut.by",
       "telephone": "375(44)7512004",
       "birthday": "1989-12-16",
@@ -97,7 +99,9 @@
       "position": "системный аналитик",
       "isBoss": 0,
       "department": 1,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail06@tut.by",
       "telephone": "375(44)7512006",
       "birthday": "1999-08-25",
@@ -148,7 +152,9 @@
       "position": "инженер-программист",
       "isBoss": 1,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail09@tut.by",
       "telephone": "375(44)7512009",
       "birthday": "1983-04-30",
@@ -181,7 +187,9 @@
       "position": "программист",
       "isBoss": 0,
       "department": 2,
-      "project": [2],
+      "project": [
+        2
+      ],
       "email": "mail011@tut.by",
       "telephone": "375(44)7512011",
       "birthday": "1987-01-04",
@@ -196,7 +204,9 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": [4],
+      "project": [
+        4
+      ],
       "email": "mail012@tut.by",
       "telephone": "375(44)7512012",
       "birthday": "1980-10-05",
@@ -211,7 +221,9 @@
       "position": "бизнес-аналитик",
       "isBoss": 0,
       "department": 1,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail013@tut.by",
       "telephone": "375(44)7512013",
       "birthday": "1979-04-13",
@@ -226,7 +238,9 @@
       "position": "инженер-программист",
       "isBoss": 1,
       "department": 2,
-      "project":[ 2],
+      "project": [
+        2
+      ],
       "email": "mail014@tut.by",
       "telephone": "375(44)7512014",
       "birthday": "1991-05-29",
@@ -311,7 +325,9 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail019@tut.by",
       "telephone": "375(44)7512019",
       "birthday": "1963-11-15",
@@ -380,7 +396,9 @@
       "position": "бизнес-аналитик",
       "isBoss": 0,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail023@tut.by",
       "telephone": "375(44)7512023",
       "birthday": "1963-08-04",
@@ -395,7 +413,9 @@
       "position": "руководитель группы разработки бизнес-систем",
       "isBoss": 0,
       "department": 4,
-      "project": [7],
+      "project": [
+        7
+      ],
       "email": "mail024@tut.by",
       "telephone": "375(44)7512024",
       "birthday": "2006-02-16",
@@ -447,7 +467,9 @@
       "position": "тестировщик ПО",
       "isBoss": 1,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail027@tut.by",
       "telephone": "375(44)7512027",
       "birthday": "1985-10-15",
@@ -462,7 +484,9 @@
       "position": "программист",
       "isBoss": 0,
       "department": 2,
-      "project": [11],
+      "project": [
+        11
+      ],
       "email": "mail028@tut.by",
       "telephone": "375(44)7512028",
       "birthday": "1975-11-23",
@@ -496,7 +520,9 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail030@tut.by",
       "telephone": "375(44)7512030",
       "birthday": "1969-01-27",
@@ -529,7 +555,9 @@
       "position": "бизнес-аналитик",
       "isBoss": 1,
       "department": 1,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail032@tut.by",
       "telephone": "375(44)7512032",
       "birthday": "1981-01-16",
@@ -631,7 +659,9 @@
       "position": "администратор системный",
       "isBoss": 0,
       "department": 1,
-      "project": [8],
+      "project": [
+        8
+      ],
       "email": "mail038@tut.by",
       "telephone": "375(44)7512038",
       "birthday": "1983-04-17",
@@ -646,7 +676,9 @@
       "position": "программист",
       "isBoss": 0,
       "department": 2,
-      "project": [2],
+      "project": [
+        2
+      ],
       "email": "mail039@tut.by",
       "telephone": "375(44)7512039",
       "birthday": "2006-06-28",
@@ -661,7 +693,9 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail040@tut.by",
       "telephone": "375(44)7512040",
       "birthday": "1973-04-20",
@@ -712,7 +746,9 @@
       "position": "программист системный ",
       "isBoss": 0,
       "department": 2,
-      "project": [10],
+      "project": [
+        10
+      ],
       "email": "mail043@tut.by",
       "telephone": "375(44)7512043",
       "birthday": "1985-06-21",
@@ -727,7 +763,9 @@
       "position": "спец.по тестированию ПО",
       "isBoss": 0,
       "department": 2,
-      "project": [2],
+      "project": [
+        2
+      ],
       "email": "mail044@tut.by",
       "telephone": "375(44)7512044",
       "birthday": "1988-05-15",
@@ -761,7 +799,9 @@
       "position": "программист",
       "isBoss": 0,
       "department": 3,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail046@tut.by",
       "telephone": "375(44)7512046",
       "birthday": "1975-08-08",
@@ -813,7 +853,9 @@
       "position": "программист",
       "isBoss": 0,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail049@tut.by",
       "telephone": "375(44)7512049",
       "birthday": "1991-05-15",
@@ -846,7 +888,9 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": [7],
+      "project": [
+        7
+      ],
       "email": "mail051@tut.by",
       "telephone": "375(44)7512051",
       "birthday": "1993-01-19",
@@ -943,7 +987,9 @@
       "position": "администратор системный",
       "isBoss": 0,
       "department": 2,
-      "project": [8],
+      "project": [
+        8
+      ],
       "email": "mail057@tut.by",
       "telephone": "375(44)7512057",
       "birthday": "1987-05-27",
@@ -995,7 +1041,9 @@
       "position": "тестировщик ПО",
       "isBoss": 0,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail060@tut.by",
       "telephone": "375(44)7512060",
       "birthday": "1988-10-13",
@@ -1010,7 +1058,9 @@
       "position": "инженер-программист",
       "isBoss": 0,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail061@tut.by",
       "telephone": "375(44)7512061",
       "birthday": "2000-12-13",
@@ -1025,7 +1075,9 @@
       "position": "программист ",
       "isBoss": 0,
       "department": 2,
-      "project": [5],
+      "project": [
+        5
+      ],
       "email": "mail062@tut.by",
       "telephone": "375(44)7512062",
       "birthday": "1987-09-10",

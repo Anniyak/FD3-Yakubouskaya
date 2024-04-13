@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Проект для работы со списком Сотрудников
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Данный проект предназначен для использования специалистом по кадрам в одной небольшой компании.
 
-## Available Scripts
+Пользователь должен иметь возможность добавить Работника, удалить Работника, редактировать его данные. Так же предоставлена возможность добавлять, редактировать и удалять Проекты.
 
-In the project directory, you can run:
+Управление списком отделов не предусмотрено, так как все возможные отделы уже добавлены, а изменение структуры происходит очень редко.
+
+В верхней области страницы отображается блок именинников месяца. Ближайший(шие) именинник(ки) выделяются жирным шрифтом и производится скролл области на него(их). Можно просматривать данные за другие месяцы, листая влево-вправо.
+
+Основная страница приложения - страница работы с Работниками. На ней можно фильтровать данные по некоторым значениям, а так же сортировать по ФИО, если требуется. Каждая строка о работнике содержит две кнопки: Удалить и Смотреть. По нажатию на Удалить текущая строчка постепенно исчезает и затем сотрудник полностью удаляется.
+
+Кроме фильтра в строке управления таблицей находится кнопка Сформировать приветствие. Для формирования приветствия требуется отметить одну или несколько записей и затем нажать данную кнопку. Будет сформирована приветственная открытка. Пользователь копирует ее в буфер и отправляет в общий чат при выходе нового сотрудника. В приветствии отображаются данные на нового работника, Имя склоняется с помощью внешнего ресурса(Морфер). Фото пока общее, позже планируется брать его из БД.
+
+По нажатию на кнопку Смотреть открывается карточка текущего Работника. Ее можно просто просмотреть или перевести в режим редактирования и править. Сохранение данных происходит по нажатию кнопки Сохранить.
+
+Из карточки сотрудника есть ссылка Известить о выходе. По нажатию на нее формируется письмо для уведомления руководителей о выходе нового сотрудника. Пока текст тестовый, так как в саму урл можно внести небольшое количество символов, а у нас еще и русский язык. В дальнейшем будет переработано в форму отправки со страници.
+
+## Запуск проекта
+
+Для запуска в рабочей директории требуется выполнить команду
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+После этого проект будет доступен в браузере  по адресу [http://localhost:3000](http://localhost:3000).
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Запускает выполнение проверочных тестов
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Собирает проект в папку  `build`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Динамичность страниц: 
 
-### `npm run eject`
+Веб-страницы динамично перестраиваются, изменяется верстка, прячутся кнопки, изменяются отображаемые данные.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Произодительность отрисовки
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Данные отрисовываются без задержек, на странице Работники 63 однотипных элемента. Используется анимация при удалении Сотрудника: строчка сначала становится прозрачной, а затем уже полностью пропадает.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Навигация в приложении
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Стрелки вперед-назад работают как надо, однако нет предупреждения о потере данных в случае если данные не были сохранены
 
-## Learn More
+## Кроссбраузерность
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Приложение работоспособно в раздичных современных браузерах, но нет отдельного вида для мобильных устройств. На данном этапе не было макетов, потому реализация оставлена на дальнейшую дороботку.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Коммуникации
 
-### Code Splitting
+Не получилось быстро сделать с json-server(новые добавленные данные невозможно было удалить и получить по id без перезагрузки самого сервера. Хотя в списке данных новые строчки были видны).
+Поскольку в дальнейшем приложение планируется переводить на использование собственного API - данные для работы берутся непосредственно из файла, лежащего в проекте. Реализован общий стейт, чтоб при переходе по разным страницам сайта не терялись произведенные исправления. 
+С помощью AJAX запросов приложение получает сколнения имён для формирования приветственной открытки со стороннего ресурса [https://ws3.morpher.ru](https://ws3.morpher.ru).
+- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## модель данных
 
-### Analyzing the Bundle Size
+Как описано выше - выделено общее хранилище, что обусловлено текущей технологией работы с данными
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## сборка проекта
 
-### Making a Progressive Web App
+Запускается командой npm start и не требует других действий, проект доступен в браузере по адресу [http://localhost:3000](http://localhost:3000)
+Когда проекту требовалось запускать json-server, то в проекте для команды start была прописана команда, запускающая и его и сам проект одновременно: "start": "concurrently \"npx json-server --watch src\\assets\\db.json --port 3001\" \"react-scripts start\""
+Данные таким образом можно было получать по ссылке [http://localhost:3001](http://localhost:3001)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## тесты
 
-### Advanced Configuration
+Есть тесты только на одну функцию - получение нового id
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -19,8 +19,8 @@ export const Calendar = (props) => {
     const [month, setMonth] = useState(currentMonth);
 
     useEffect(() => {
-        const element=document.getElementById("currentBirth");
-        if (element)element.scrollIntoView();
+        const element = document.getElementById("currentBirth");
+        if (element) element.scrollIntoView();
 
     }, [month])
     const changeMonth = (num: number) => {
@@ -56,11 +56,11 @@ export const Calendar = (props) => {
     return (<div className="birthdayBlock">
         <div className="calendarTitle">Именинники {Months[month]}</div>
         <div className="scrolledBlock">
-            {happiestList.map(h => <div key={h.id} className={h.current ? 'current' : ''} id={h.current?'currentBirth':''}> {h.birthDay} - {h.surname} {h.name}</div>)}
+            {happiestList.map(h => <div key={h.id} className={h.current ? 'current' : ''} id={h.current ? 'currentBirth' : ''}> {h.birthDay} - {h.surname} {h.name}</div>)}
         </div>
-<div className="calendarButtons">
-        <input type="button" value={'Именинники ' + Months[((month - 1 + 12) % 12)]} onClick={() => { changeMonth(-1) }} />
-        <input type="button" value={'Именинники ' + Months[((month + 1 + 12) % 12)]} onClick={() => { changeMonth(1) }} /></div>
+        <div className="calendarButtons">
+            <input type="button" value={'Именинники ' + Months[((month - 1 + 12) % 12)]} onClick={() => { changeMonth(-1) }} />
+            <input type="button" value={'Именинники ' + Months[((month + 1 + 12) % 12)]} onClick={() => { changeMonth(1) }} /></div>
     </div>
     );
 }

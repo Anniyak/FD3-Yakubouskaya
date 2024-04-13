@@ -1,11 +1,13 @@
 {
   "name": "employees",
   "version": "0.1.0",
+  "type":"module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.8",
     "concurrently": "^8.2.2",
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
@@ -19,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "concurrently \"npx json-server --watch src\\assets\\db.json --port 3001\" \"react-scripts start\""
+    "start": "react-scripts start"    
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-test-renderer": "^18.2.0"
   }
 }

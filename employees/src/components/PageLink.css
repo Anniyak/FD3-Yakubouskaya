@@ -1,14 +1,15 @@
-.navigateBlock{
+.navigateBlock {
     font-weight: bold;
     font-size: x-large;
 }
+
 .PageLink {
     color: black;
     margin-right: 10px;
 }
 
 .ActivePageLink {
-    
+
     color: rgb(229, 215, 195);
     background-color: rgb(141, 87, 1);
 }

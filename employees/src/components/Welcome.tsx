@@ -1,26 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios, { AxiosResponse } from 'axios';
 import { Months } from '../scripts/calendarHelper.ts';
 import './Welcome.css'
-//import{Employee, Department} from '../scripts/types.ts'
 
 
 export const Welcome = (props) => {
-    const getItemsTemplate=()=>{return props.checkedItems.map(empl=> {return(
-        <div className='welcomItem' key={empl.id}>
-                    
+    const [morthData, setMorthData] = useState([] as AxiosResponse<any, any>[]);
+    useEffect(() => {
+        async function loadMorpher() {
+            const getList: Promise<AxiosResponse<any, any>>[] = [];
+            for (let i = 0; i < props.checkedItems.length; i++)
+                getList.push(axios.get(`https://ws3.morpher.ru/russian/declension?s=${props.checkedItems[i].name}&format=json`))
+            const resultData = await Promise.all(getList);
+            setMorthData(resultData);
+        }
+        loadMorpher();
+
+    }, [props.checkedItems]);
+    const getItemsTemplate = () => {
+        return props.checkedItems.map((empl, ind) => {
+            return (
+                <div className='welcomItem' key={empl.id}>
                     <div className='itemPhoto'>
                         <img src='/emplPhoto.jpg' alt='Синьков'></img>
                     </div>
                     <div className='itemText'>
-                        С {new Date(empl.employmentDate).getDay()} {Months[(new Date(empl.employmentDate).getMonth())]} к нашей команде присоединился системный программист <span className='employeeName'>{empl.surname+' '+empl.name}</span>.<br />
-                        Евгений работает в команде с Артёмом Масько.<br />
-                        От лица компании желаем Евгению успехов
+                        С {new Date(empl.employmentDate).getDay()} {Months[(new Date(empl.employmentDate).getMonth())]} к нашей команде присоединился {empl.position} <span className='employeeName'>{empl.surname + ' ' + empl.name}</span>.<br />
+                        {empl.name} работает в команде с Артёмом Масько.<br />
+                        От лица компании желаем {morthData[ind]?.data?.['Д']} успехов
                         в работе и скорейшей адаптации в нашем коллективе.<br />
-                        <b>Контакты Евгения:</b><br />
+                        <b>Контакты {morthData[ind]?.data?.['Р']}:</b><br />
                         Эл. почта: <span className='employeeEmail'>{empl.email}</span><br />
                         Skype: {empl.skype}<br />
                         Моб. тел.: {empl.telephone}</div>
-                </div>);}
+                </div>);
+        }
         );
     }
 
@@ -33,12 +47,9 @@ export const Welcome = (props) => {
             </div>
             <div className='welcomText'>Добро пожаловать в команду!</div>
             <div className='welcomItems'>
-                
                 {getItemsTemplate()}
-           
-               
             </div>
-            <input type='button' value='Закрыть' className='closeBtn' onClick={props.onClose}/>
+            <input type='button' value='Закрыть' className='closeBtn' onClick={props.onClose} />
         </div>
     );
 }

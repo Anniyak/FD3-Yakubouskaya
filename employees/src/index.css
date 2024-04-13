@@ -1,7 +1,10 @@
-input, select,textarea{
+input,
+select,
+textarea {
   border-radius: 5px;
 }
-html{
+
+html {
   font-family: 'Courier New', Courier, monospace;
   background-color: rgba(253, 243, 228, 0.99);
   min-width: 630px;

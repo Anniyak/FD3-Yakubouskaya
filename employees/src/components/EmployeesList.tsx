@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import Select from 'react-select'
+import { NavLink } from 'react-router-dom';
 import { EmployeeType, DepartmentType } from '../scripts/types.ts'
 import { DEPARTMENTS, PROJECTS, MALE, FEMALE, EMPLOYEES } from '../scripts/constants.ts';
 import { Welcome } from './Welcome.tsx'
-import { Employee } from './Employee.tsx';
 import './EmployeesList.css'
 
 export const EmpoyeesList = (props) => {
-    const [checked, setChecked] = useState([0]);//0 чтоб ts правильно определил тип данных
+    const [checked, setChecked] = useState([] as number[]);
     const [welcomeShow, setWelcomeShow] = useState(false);
     const [employees, setEmployees] = useState(props.data);
-    const [currentEmployeeId, setCurrentEmployeeId]=useState(props.employeeId);
+    const [currentEmployeeId, setCurrentEmployeeId] = useState(props.employeeId);
     const [genderFilter, setGenderFilter] = useState('');
     const [fioFilter, setFioFilter] = useState('');
     const [positionFilter, setPositionFilter] = useState('');
     const [bossFilter, setBossFilter] = useState(false);
     const [sort, setSort] = useState(false);
+    let morferList: Promise<any>[] = [];
     useEffect(() => {
         let filteredEmployeers = genderFilter != '' ? props.data.filter(emp => emp.gender == genderFilter) : [...props.data];
         if (bossFilter) filteredEmployeers = filteredEmployeers.filter(emp => emp.isBoss == 1);
@@ -24,24 +24,19 @@ export const EmpoyeesList = (props) => {
             return (FIO.toUpperCase().includes(fioFilter.toUpperCase()))
         });
         if (positionFilter != '') filteredEmployeers = filteredEmployeers.filter(emp => emp.position.toUpperCase().includes(positionFilter.toUpperCase()));
-        if (sort) filteredEmployeers=filteredEmployeers.sort((a,b)=>{
-            const fioA=[a.surname, a.name, a.patronymic].join(' ');
-            const fioB=[b.surname, b.name, b.patronymic].join(' ');
-            if (fioA>fioB) return 1;
-            if (fioA<fioB) return -1;
+        if (sort) filteredEmployeers = filteredEmployeers.sort((a, b) => {
+            const fioA = [a.surname, a.name, a.patronymic].join(' ');
+            const fioB = [b.surname, b.name, b.patronymic].join(' ');
+            if (fioA > fioB) return 1;
+            if (fioA < fioB) return -1;
             return 0;
-            
+
         });
 
         setEmployees(filteredEmployeers);
 
-    }, [props.data,genderFilter, fioFilter, positionFilter, bossFilter,sort])
+    }, [props.data, genderFilter, fioFilter, positionFilter, bossFilter, sort])
 
-    const maleSelect = [
-        { value: '', label: '' },
-        { value: FEMALE, label: 'Жен' },
-        { value: MALE, label: 'Муж' }
-    ]
 
     const changeChecked = (eo) => {
         if (eo.target.checked) {
@@ -51,16 +46,18 @@ export const EmpoyeesList = (props) => {
             let newArr: number[] = [];
             checked.forEach(ch => { if (ch !== +eo.target.dataset.id) newArr.push(+ch); });
             setChecked(newArr);
-            if(newArr.length==1) setWelcomeShow(false);
+            if (newArr.length == 0) setWelcomeShow(false);
         }
     }
     const onClose = () => {
         setWelcomeShow(false);
     }
-    const makeWelcom = () => {
-        if (checked.length < 2) alert('Требуется выбрать хотя бы одну запись')
-        else
+    const makeWelcom = async () => {
+        if (checked.length < 1) alert('Требуется выбрать хотя бы одну запись')
+        else {
             setWelcomeShow(true);
+        }
+
     }
     const genderChange = (eo) => {
         setGenderFilter(eo.target.value);
@@ -73,30 +70,23 @@ export const EmpoyeesList = (props) => {
         setBossFilter(false);
         setSort(false);
     }
-    const deleteEmployee = (eo,id) => {
+    const deleteEmployee = (eo, id) => {
 
-        employees.find(empl=>+empl.id==id).deleted=true;
-       // eo.target.parentElement.parentElement.classList.add("deleted");
-        setTimeout(()=>{
-             props.deleteData(EMPLOYEES,id);
-        },500)
+        employees.find(empl => +empl.id == id).deleted = true;
+        setTimeout(() => {
+            props.deleteData(EMPLOYEES, id);
+        }, 500)
 
 
-    
+
     }
-    const openEmployee=(id)=>{
-        window.location.assign('../emloyee/'+id);
-    }
-
     const getEmplTemplate = () => {
-
-
-        return employees.map((empl: EmployeeType,ind) => {
+        return employees.map((empl: EmployeeType, ind) => {
             const department: DepartmentType = props.getDataById(DEPARTMENTS, empl.department);
             const projects = empl.project && empl.project.length ? empl.project.map(pr => props.getDataById(PROJECTS, pr).name).join(', ') : "";
-            return <tr key={empl.id} className={['emplRow',(checked.includes(+empl.id)?'checked':''),(currentEmployeeId==+empl.id?'selected':''),(empl.deleted?'deleted':'')].join(' ')} onClick={()=>setCurrentEmployeeId(+empl.id)}>
+            return <tr key={empl.id} className={['emplRow', (checked.includes(+empl.id) ? 'checked' : ''), (currentEmployeeId == +empl.id ? 'selected' : ''), (empl.deleted ? 'deleted' : '')].join(' ')} onClick={() => setCurrentEmployeeId(+empl.id)}>
                 <td><input type='checkbox' checked={checked.includes(+empl.id)} onChange={changeChecked} data-id={+empl.id} /></td>
-                <td>{ind+1}</td>
+                <td>{ind + 1}</td>
                 <td>{empl.surname + ' ' + empl.name + ' ' + empl.patronymic}</td>
                 <td>{empl.position}</td>
                 <td>{projects}</td>
@@ -105,54 +95,56 @@ export const EmpoyeesList = (props) => {
                 <td>{empl.email}</td>
                 <td>{empl.telephone}</td>
                 <td>
-                <input type='button' value='Удалить' onClick={(eo)=>deleteEmployee(eo,+empl.id)} />
-                <input type='button' value='Посмотреть' onClick={()=>{openEmployee(+empl.id)}} />
-                    </td>
+                    <div className='itemButtons'>
+                        <input type='button' value='✘' onClick={(eo) => deleteEmployee(eo, +empl.id)} title='Удалить' />
+                        <NavLink to={"/emloyee/" + empl.id} className='btn' title='Открыть'>👀</NavLink>
+                    </div>
+                </td>
             </tr>;
         })
     }
     const checkedItems = props.data.filter(em => checked.includes(+em.id));
     return (
         <div className='employeesPage'>
-            <div>  
-                <div className='controlPanel'>      
-                 <div className='filterControls'>
-                 <input type='checkbox' checked={sort} onChange={(eo) => setSort(eo.target.checked)}  />
-                <label>Сортировать по ФИО</label>
-                <input type='text' value={fioFilter} onChange={(eo) => setFioFilter(eo.target.value)} placeholder='ФИО' />
-                <select value={genderFilter} onChange={genderChange} >
-                    <option value="" disabled>Пол</option>
-                    <option value={FEMALE}>Жен</option>
-                    <option value={MALE}>Муж</option>
-                </select>
-                {/* <Select  options={maleSelect} onChange={genderChange} className='maleSelect' placeholder='Пол'/> */}
-                <input type='text' value={positionFilter} onChange={(eo) => setPositionFilter(eo.target.value)} placeholder='Должность' />
-                <input type='checkbox' checked={bossFilter} onChange={(eo) => setBossFilter(eo.target.checked)}  />
-                <label>Руководитель</label>
-                <input type='button' value='Очистить фильтр' onClick={clearFilter} />
-            </div>
-            {welcomeShow ? <Welcome onClose={onClose} checkedItems={checkedItems} /> : <input type='button' value='Сформировать приветствие' onClick={makeWelcom} />}
-            </div>   
-            <table className='EmployeesTable'>
-                <tbody>
-                    <tr>
-                        <th></th>
-                        <th>№</th>
-                        <th>Фамилия Имя Отчество</th>
-                        <th>Должность</th>
-                        <th>Проекты</th>
-                        <th>Статус</th>
-                        <th>Отдел</th>
-                        <th>Почта</th>
-                        <th>Телефон</th>
-                        <th></th>
-                    </tr>
+            <div>
 
-                    {getEmplTemplate()}
-                </tbody>
-            </table></div>
+                <NavLink to="/emloyee/-1" className='btn'>Добавить сотрудника</NavLink>
+                <div className='controlPanel'>
+                    <div className='filterControls'>
+                        <input type='checkbox' checked={sort} onChange={(eo) => setSort(eo.target.checked)} />
+                        <label>Сортировать по ФИО</label>
+                        <input type='text' value={fioFilter} onChange={(eo) => setFioFilter(eo.target.value)} placeholder='ФИО' />
+                        <select value={genderFilter} onChange={genderChange} >
+                            <option value="" disabled>Пол</option>
+                            <option value={FEMALE}>Жен</option>
+                            <option value={MALE}>Муж</option>
+                        </select>
+                        {/* <Select  options={maleSelect} onChange={genderChange} className='maleSelect' placeholder='Пол'/> */}
+                        <input type='text' value={positionFilter} onChange={(eo) => setPositionFilter(eo.target.value)} placeholder='Должность' />
+                        <input type='checkbox' checked={bossFilter} onChange={(eo) => setBossFilter(eo.target.checked)} />
+                        <label>Руководитель</label>
+                        <input type='button' value='Очистить фильтр' onClick={clearFilter} />
+                    </div>
+                    {welcomeShow ? <Welcome onClose={onClose} checkedItems={checkedItems} morferList={morferList} /> : <input type='button' value='Сформировать приветствие' onClick={makeWelcom} />}
+                </div>
+                <table className='EmployeesTable'>
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>№</th>
+                            <th>Фамилия Имя Отчество</th>
+                            <th>Должность</th>
+                            <th>Проекты</th>
+                            <th>Статус</th>
+                            <th>Отдел</th>
+                            <th>Почта</th>
+                            <th>Телефон</th>
+                            <th></th>
+                        </tr>
 
-            
+                        {getEmplTemplate()}
+                    </tbody>
+                </table></div>
 
         </div>
     );
